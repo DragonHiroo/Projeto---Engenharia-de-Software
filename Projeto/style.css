@@ -1,0 +1,33 @@
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 2px solid #287F67;
+    box-shadow: 0 2px 0 0 solid black;
+}
+
+.active-cyan-2 .fa {
+    color: black;
+}
+
+.btn-secondary:hover {
+    background-color: #287F67;
+}
+
+.btn-secondary {
+    background-color: white;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
