@@ -15,11 +15,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
   <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow" style="background-color: #067F6E;">
-=======
-  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
->>>>>>> 54fe2fb3e34f53d4ab32710a2bd06e9e84614d81
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Hospital - Cirurgias</a>
 
     <!--input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"-->
@@ -62,11 +58,7 @@
               </a>
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
               <a class="nav-link" href="cadastro.php">
-=======
-              <a class="nav-link" href="#">
->>>>>>> 54fe2fb3e34f53d4ab32710a2bd06e9e84614d81
                 <!-- span data-feather="file-text"></span-->
                 Cadastrar cirurgia
               </a>
@@ -123,7 +115,6 @@
         </div>
 
         <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-
         <h2>Cirurgias do Mês</h2>
         <div class="table-responsive">
           <table class="table table-striped table-sm">
@@ -257,7 +248,5 @@
   </div>
   <script src="node_modules/jquery/dist/jquery.slim.min"></script>
   <script src="node_modules/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
