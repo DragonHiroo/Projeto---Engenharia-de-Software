@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS dashboard -->
     <link href="dashboard.css" rel="stylesheet">
+
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -103,7 +104,7 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Busca por médico</h1>
+                    <h1 class="h2">Busca por paciente</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
                             <!--button type="button" class="btn btn-sm btn-outline-secondary">Share</button-->
@@ -117,34 +118,14 @@
                 </div>
 
                 <!--    Busca   -->
-                <div>
-                    <form class="form-inline md-form form-sm active-cyan-2 mt-2">
-                        <input id="campo_busca" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Digite o nome do(a) médico(a)..." aria-label="Search">
-                        <button class="btn btn-secondary" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                    <div>
-                        Buscar por:
-                        <form>
-                            <select class="form-control" name="op" id="opcoes">
-                                <option value="nome" selected="selected" id="n">Nome</option>
-                                <option value="CRM" id="crm">CRM</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
+                <form class="form-inline md-form form-sm active-cyan-2 mt-2">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Digite o nome do(a) paciente..." aria-label="Search">
+                    <button class="btn btn-secondary" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
         </div>
         </form>
-
-        <!-- Trocando placeholder -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script>
-            $('#opcoes').on('change', function() {
-                var opcao = $(this).find('option:selected').val()
-                $('#campo_busca').attr('placeholder', 'Digite o ' + opcao + ' do(a) médico(a)...')
-            })
-        </script>
 
         </main>
     </div>

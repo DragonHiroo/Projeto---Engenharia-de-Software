@@ -58,7 +58,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="cadastro.php">
                 <!-- span data-feather="file-text"></span-->
                 Cadastrar cirurgia
               </a>
@@ -66,31 +66,31 @@
             </h6>
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Buscas</span>
-              <a class="d-flex align-items-center text-muted" href="#">
+              <a class="d-flex align-items-center text-muted">
                 <!--span data-feather="plus-circle"></span-->
               </a>
             </h6>
             <ul class="nav flex-column mb-2">
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="busca_medico.php">
                   <!-- span data-feather="file-text"></span-->
                   Buscar por médicos
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="busca_enfermeiros.php">
                   <!-- span data-feather="file-text"></span-->
                   Buscar por enfermeiros
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="busca_paciente.php">
                   <!-- span data-feather="file-text"></span-->
                   Buscar por pacientes
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="busca_especialidade.php">
                   <!-- span data-feather="file-text"></span-->
                   Busca por especialidades
                 </a>
@@ -113,61 +113,61 @@
           </button-->
           </div>
         </div>
-        
+
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <form action="">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="exampleInputEmail1">Médico Responsável</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CRM">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, digite o código CRM</small>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="exampleInputPassword1">Enferméiro Responsavel</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="COREM">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, digite o código COREM</small>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="exampleInputPassword1">Paciente</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Código do Paciente">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, digite o código do Pacietne</small>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="exampleInputPassword1">Especialidade</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="nome da Especialidade">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, digite o nome da Especialidade</small>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="exampleInputPassword1">Data</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite a Data">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, digite a Data</small>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="exampleInputPassword1">Hora de Inicio</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Incio">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, digite a Hora de Inicio</small>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="exampleInputPassword1">Hora de Término</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Termino">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, digite a Hora de Termino</small>
-                    </div>
-                </div>
-                <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>
-            </form>
+          <form action="">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="exampleInputEmail1">Médico Responsável</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CRM">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite o código CRM</small>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">Enferméiro Responsavel</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="COREM">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite o código COREM</small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">Paciente</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Código do Paciente">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite o código do Pacietne</small>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">Especialidade</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="nome da Especialidade">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite o nome da Especialidade</small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="exampleInputPassword1">Data</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite a Data">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite a Data</small>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="exampleInputPassword1">Hora de Inicio</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Incio">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite a Hora de Inicio</small>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="exampleInputPassword1">Hora de Término</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Termino">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite a Hora de Termino</small>
+              </div>
+            </div>
+            <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>
+          </form>
         </div>
 
 
 
 
         <!--canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas-->
-        
 
-        
+
+
       </main>
     </div>
   </div>
