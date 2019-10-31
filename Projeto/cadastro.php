@@ -120,12 +120,12 @@
               <div class="form-group col-md-6">
                 <label for="exampleInputPassword1">Paciente</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Código do Paciente">
-                <small id="emailHelp" class="form-text text-muted">Por favor, digite o código do Pacietne</small>
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite o código do Paciente</small>
               </div>
               <div class="form-group col-md-6">
                 <label for="exampleInputPassword1">Especialidade</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="nome da Especialidade">
-                <small id="emailHelp" class="form-text text-muted">Por favor, digite o nome da Especialidade</small>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Especialidade">
+                <small id="emailHelp" class="form-text text-muted">Por favor, digite a Especialidade</small>
               </div>
             </div>
             <div class="form-row">
@@ -136,7 +136,7 @@
               </div>
               <div class="form-group col-md-3">
                 <label for="exampleInputPassword1">Hora de Inicio</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Incio">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Inicio">
                 <small id="emailHelp" class="form-text text-muted">Por favor, digite a Hora de Inicio</small>
               </div>
               <div class="form-group col-md-3">
