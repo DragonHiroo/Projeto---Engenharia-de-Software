@@ -42,7 +42,7 @@
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="cadastro_paciente.php">
                                 <!-- span data-feather="file-text"></span-->
                                 Cadastrar paciente
                             </a>
