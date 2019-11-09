@@ -8,8 +8,23 @@
         <i class="fa fa-search"></i>
     </button>
 </form>
+
+<div class="mt-2 md-2">
+    <h5>Resultados da busca por: {{$busca}}</h5>
+</div>
+<div class="resultado">
+    <!-- Exibe os resultados ou mensagem "resultado não encontrado" dependendo do valor enviado pelo controller -->
+    <?php if ($res == 'n_enc') { ?>
+        Resultado não encontrado!
+    <?php } else if ($res == 'enc') { ?>
+        Resultado encontrado!
+    <?php } ?>
+</div>
+
 <script>
     $(document).attr("title", "Cirurgia - Busca");;
-    $('#titulo_topo').text("Busca por enfermeiros")
+    $('#titulo_topo').text("Busca por especialidade")
 </script>
+
+<script type
 @endsection

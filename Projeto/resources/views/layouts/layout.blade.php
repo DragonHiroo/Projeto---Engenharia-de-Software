@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Guilherme Rodrigues, Matheus Santana, Matheus, Wilson">
+
+    <meta name="_token" content="{{ csrf_token() }}">
+    
     <title>Cirurgia</title>
 
     <!-- Bootstrap -->
@@ -40,13 +43,13 @@
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto/public/cadastro/paciente" id="cadastro_paciente">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/cadastro/paciente" id="cadastro_paciente">
                                 <!-- span data-feather="file-text"></span-->
                                 Cadastrar paciente
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto/public/cadastro/cirurgia" id="cadastro_cirurgia">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/cadastro/cirurgia" id="cadastro_cirurgia">
                                 <!-- span data-feather="file-text"></span-->
                                 Cadastrar cirurgia
                             </a>
@@ -60,25 +63,25 @@
                         </h6>
                         <ul class="nav flex-column mb-2">
                             <li class="nav-item">
-                                <a class="nav-link" href="/Projeto/public/busca/medico">
+                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/medico">
                                     <!-- span data-feather="file-text"></span-->
                                     Buscar por médicos
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Projeto/public/busca/enfermeiro">
+                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/enfermeiro">
                                     <!-- span data-feather="file-text"></span-->
                                     Buscar por enfermeiros
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Projeto/public/busca/paciente">
+                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/paciente">
                                     <!-- span data-feather="file-text"></span-->
                                     Buscar por pacientes
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Projeto/public/busca/especialidade">
+                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/especialidade">
                                     <!-- span data-feather="file-text"></span-->
                                     Busca por especialidades
                                 </a>
@@ -101,7 +104,7 @@
     </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 

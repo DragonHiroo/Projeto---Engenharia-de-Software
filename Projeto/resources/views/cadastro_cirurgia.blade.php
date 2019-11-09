@@ -2,46 +2,42 @@
 
 @section('content')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <form action="">
+    <form action="" method="POST">
+      @csrf
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="exampleInputEmail1">Médico Responsável</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CRM">
-          <small id="emailHelp" class="form-text text-muted">Por favor, digite o código CRM</small>
+          <label for="medico">Médico Responsável</label>
+          <input type="number" class="form-control" placeholder="CRM" required="required">
+          <small id="emailHelp" class="form-text text-muted">Por favor, digite o código CRM do médico responsável</small>
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleInputPassword1">Enferméiro Responsavel</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="COREM">
+          <label for="exampleInputPassword1">Enfermeiro Responsavel</label>
+          <input type="number" class="form-control" placeholder="COREM" required="required">
           <small id="emailHelp" class="form-text text-muted">Por favor, digite o código COREM</small>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="exampleInputPassword1">Paciente</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Código do Paciente">
-          <small id="emailHelp" class="form-text text-muted">Por favor, digite o código do Paciente</small>
+          <label for="paciente">Paciente</label>
+          <input type="text" class="form-control" placeholder="CPF do Paciente" required="required">
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleInputPassword1">Especialidade</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Especialidade">
-          <small id="emailHelp" class="form-text text-muted">Por favor, digite a Especialidade</small>
+          <label for="especialidade">Especialidade</label>
+          <input type="text" class="form-control" placeholder="Especialidade" required="required">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="exampleInputPassword1">Data</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite a Data">
-          <small id="emailHelp" class="form-text text-muted">Por favor, digite a Data</small>
+          <label for="Data">Data</label>
+          <input type="text" class="form-control" placeholder="Digite a Data" required="required">
         </div>
         <div class="form-group col-md-3">
-          <label for="exampleInputPassword1">Hora de Inicio</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Inicio">
-          <small id="emailHelp" class="form-text text-muted">Por favor, digite a Hora de Inicio</small>
+          <label for="hora_inicio">Hora de Inicio</label>
+          <input type="number" class="form-control" placeholder="Hora de Inicio" required="required">
         </div>
         <div class="form-group col-md-3">
-          <label for="exampleInputPassword1">Hora de Término</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hora de Termino">
-          <small id="emailHelp" class="form-text text-muted">Por favor, digite a Hora de Termino</small>
+          <label for="hora_termino">Hora de Término</label>
+          <input type="number" class="form-control" placeholder="Hora de Termino" required="required">
         </div>
       </div>
       <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>

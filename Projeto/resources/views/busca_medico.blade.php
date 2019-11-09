@@ -3,24 +3,22 @@
 @section('content')
 <!--    Busca   -->
 <div>
-    <form class="form-inline md-form form-sm active-cyan-2 mt-2">
-        <input id="campo_busca" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Digite o nome do(a) médico(a)..." aria-label="Search">
-        <button class="btn btn-secondary" type="button">
-            <i class="fa fa-search"></i>
+    <form class="form-block md-form form-sm active-cyan-2 mt-2">
+        <div class="form-inline">
+            <input id="campo_busca" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Digite o nome do(a) médico(a)..." aria-label="Busca" name="busca">
+            <button class="btn btn-secondary" type="button">
+                <i class="fa fa-search"></i>
+        </div>
         </button>
+            <div class="d-block">
+                Buscar por:
+                    <select class="form-control" name="op" id="opcoes">
+                        <option value="nome" selected="selected" id="n">Nome</option>
+                        <option value="CRM" id="crm">CRM</option>
+                    </select>
+            </div>
     </form>
-    <div>
-        Buscar por:
-        <form>
-            <select class="form-control" name="op" id="opcoes">
-                <option value="nome" selected="selected" id="n">Nome</option>
-                <option value="CRM" id="crm">CRM</option>
-            </select>
-        </form>
-    </div>
 </div>
-</div>
-</form>
 
 <!-- Trocando placeholder -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

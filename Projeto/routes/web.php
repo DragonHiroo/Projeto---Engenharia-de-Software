@@ -10,14 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use Illuminate\Http\Request;
+
 //Rota home
 Route::get('/', 'HomeController@index');
 
 //Rotas cadastro
+Route::post('/cadastro/paciente', 'CadastroController@cadastroP');
 Route::get('/cadastro/paciente', 'CadastroController@paciente');
+Route::post('/cadastro/cirurgia', 'CadastroController@cadastroC');
 Route::get('/cadastro/cirurgia', 'CadastroController@cirurgia');
-//Route::get('/cadastro/medico', 'CadastroController@medico');
-//Route::get('/cadastro/sala', 'CadastroController@sala');
 
 //Rotas busca
 Route::get('/busca/medico', 'BuscaController@medico');
