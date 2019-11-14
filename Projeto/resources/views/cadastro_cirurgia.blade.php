@@ -28,6 +28,17 @@
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
+          <label for="sala">Sala</label>
+          <input type="text" class="form-control" placeholder="Sala da Cirurgia" required="required">
+        </div>
+      <div class="form-group col-md">
+          <label for="medico">Laudo</label>
+          <input type="text" class="form-control" placeholder="Laudo">
+          <small id="laudo" class="form-text text-muted">Caso necessário, digite uma descrição do laudo</small>
+      </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
           <label for="Data">Data</label>
           <input type="text" class="form-control" placeholder="Digite a Data" required="required">
         </div>
@@ -39,11 +50,7 @@
           <label for="hora_termino">Hora de Término</label>
           <input type="number" class="form-control" placeholder="Hora de Termino" required="required">
         </div>
-        <div class="form-group col-md">
-            <label for="medico">Laudo</label>
-            <input type="text" class="form-control" placeholder="laudo">
-            <small id="laudo" class="form-text text-muted">Caso necessário, digite uma descrição do laudo</small>
-        </div>
+      </div>
       </div>
       <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>
     </form>
@@ -51,6 +58,6 @@
   
 <script>
     $(document).attr("title", "Cirurgia - Cadastro de cirurgia");;
-    $('#titulo_topo').text("Cadastro de nova cirurgia")
+    $('#titulo_topo').text("Cadastrar Cirurgia")
 </script>
 @endsection
