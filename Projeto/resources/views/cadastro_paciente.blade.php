@@ -5,11 +5,7 @@
     <form action="" method="POST">
       @csrf
       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="laudo">Laudo Médico</label>
-          <input type="text" name="laudo" class="form-control" aria-describedby="emailHelp" placeholder="Laudo Médico">
-        </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md">
           <label for="nome">Nome</label>
           <input type="text" name="nome" class="form-control" placeholder="Nome do Paciente" >       
         </div>

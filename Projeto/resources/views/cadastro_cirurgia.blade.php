@@ -39,6 +39,11 @@
           <label for="hora_termino">Hora de Término</label>
           <input type="number" class="form-control" placeholder="Hora de Termino" required="required">
         </div>
+        <div class="form-group col-md">
+            <label for="medico">Laudo</label>
+            <input type="text" class="form-control" placeholder="laudo">
+            <small id="laudo" class="form-text text-muted">Caso necessário, digite uma descrição do laudo</small>
+        </div>
       </div>
       <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>
     </form>
