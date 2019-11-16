@@ -7,7 +7,21 @@
     <button class="btn btn-secondary" type="button">
         <i class="fa fa-search"></i>
     </button>
-</form>
+    <div>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-2 mb-3 border-bottom">
+    <form action="" method="GET">
+    <div class="form-group col-md-3">
+    <label for="data_inicio">Data de início</label>
+        <input type="date" class="form-control" placeholder="Data de início" name="data_i" required="required">
+        </div>
+    <div class="form-group col-md-5">
+    <label for="data_fim">Data de fim</label>
+        <input type="date" class="form-control" placeholder="Data de fim" name="data_f" required="required">
+        </div>
+        </div>
+    </form>
+</div>
+
 <div class="resultados" style="visibility: hidden">
     <h5 class="mt-3">Resultados da busca por "texto":</h5>
     <div class="table-responsive mt-3" id>
