@@ -11,8 +11,6 @@ class cirurgia extends Model
 {
     public static function cadastro($dados)
     {
-       //Inserir dados aqui
-
         try {
             $crm = $dados->crm;
             $corem = $dados->corem;
@@ -35,12 +33,18 @@ class cirurgia extends Model
                 return -1;
         }
         catch(QueryException $excecao) {
-            if ($excecao->getMessage() == 23505)
+            if ($excecao->getMessage() == 23505) {
+                var_dump($excecao);
                 return 23505; //Chave duplicada
-            else if ($excecao->getMessage() == 42830)
+            }
+            else if ($excecao->getMessage() == 42830) {
+                var_dump($excecao);
                 return 42830; //Chave estrangeira inválida
-            else
+            }
+            else {
+                var_dump($excecao);
                 return -1;
+            }
             
         }
     }
@@ -51,7 +55,7 @@ class cirurgia extends Model
     }
 
     public static function home_agendadas() {
-        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE cirurgia.agenda = '1' ORDER BY data");
+        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE cirurgia.agenda = '1' AND (cirurgia.data between '30/11/2019' AND '01/12/2019') ORDER BY data");
         return $cirurgias_agendadas;
     }
 

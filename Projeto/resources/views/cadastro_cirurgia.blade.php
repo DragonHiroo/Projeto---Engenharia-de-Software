@@ -55,9 +55,6 @@
 <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>
 </form>
 
-<?php var_dump($res); ?>
-
-
 @if($res==1)
 <div class="alert alert-success">
   <strong>Cirurgia cadastrada com sucesso!</strong>
