@@ -8,11 +8,17 @@ use Illuminate\Support\Facades\DB;
 class medico extends Model
 {
     public static function busca_crm($info) {
-        $resultado = DB::select('SELECT crm, nome, nome_especialidade, data, corem_enfermeiro, cpf_paciente, hora_inicio, duracao from medico, cirurgia WHERE medico.crm = cirurgia.crm_medico AND medico.crm = :crm ORDER BY cirurgia.data DESC', ['crm' => $info]);
+        $resultado = DB::select("SELECT crm, nome FROM medico WHERE crm = :crm ORDER BY crm", ['crm' => $info]);     
         return $resultado;
     }
 
     public static function busca_nome($info) {
-        return $info;
+        $resultado = DB::select("SELECT crm, nome FROM medico WHERE nome LIKE :name ORDER BY nome", ['name' => '%'.$info.'%']);        
+        return $resultado;
+    }
+
+    public static function busca_cirurgias($info) {
+        $resultado = DB::select('SELECT crm, nome, nome_especialidade, data, corem_enfermeiro, cpf_paciente, hora_inicio, duracao from medico, cirurgia WHERE medico.crm = cirurgia.crm_medico AND medico.crm = :crm ORDER BY cirurgia.data DESC', ['crm' => $info]);
+        return $resultado;
     }
 }

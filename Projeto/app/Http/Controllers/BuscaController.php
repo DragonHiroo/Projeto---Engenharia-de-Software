@@ -15,20 +15,31 @@ class BuscaController extends Controller
     {
         $busca = $request->busca;
         $op = $request->op;
+        $visualiza = $request->crm;
 
         if ($busca && $op) { //Parâmetros da busca corretos
             if ($op == 'CRM') { //Busca por CRM
                 $resultado = medico::busca_crm($busca);
-                $tipo = 1;
-            } else if ($op == 'nome') { //Busca por nome
+                return view('busca_medico_resultado', ['busca' => $busca, 'res' => $resultado]);
+
+            } else if ($op == 'nome' && !$visualiza) { //Busca por nome, listar nomes
                 $resultado = medico::busca_nome($busca);
-                $tipo = 2;
+                return view('busca_medico_resultado', ['busca' => $busca, 'res' => $resultado]);
+
             }
-            return view('busca_medico_resultado', ['busca' => $busca, 'res' => $resultado, 'tipo' => $tipo]);
         } else if (!($busca)) { //Não houve busca, redireciona para a página inicial
             return view('busca_medico');
         }
     }
+
+    public function visualiza_cirurgias(Request $request)
+    {
+        $crm = $request->crm;
+        $resultado = medico::busca_cirurgias($crm);
+        return view('busca_medico_visualizacao', ['res' => $resultado]);
+    }
+
+
     public function enfermeiro(Request $request)
     {
         $busca = $request->busca;

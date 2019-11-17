@@ -18,12 +18,12 @@ Route::get('/', 'HomeController@index');
 
 //Rotas cadastro
 Route::post('/cadastro/paciente', 'CadastroController@cadastroP');
-Route::get('/cadastro/paciente', 'CadastroController@paciente');
 Route::post('/cadastro/cirurgia', 'CadastroController@cadastroC');
 Route::get('/cadastro/cirurgia', 'CadastroController@cirurgia');
 
 //Rotas busca
 Route::get('/busca/medico', 'BuscaController@medico');
+Route::get('/busca/medico/{crm}', 'BuscaController@visualiza_cirurgias');
 Route::get('/busca/enfermeiro', 'BuscaController@enfermeiro');
 Route::get('/busca/paciente', 'BuscaController@paciente');
 Route::get('/busca/especialidade', 'BuscaController@especialidade');
