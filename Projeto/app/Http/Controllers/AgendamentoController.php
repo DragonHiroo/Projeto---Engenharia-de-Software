@@ -13,6 +13,17 @@ class AgendamentoController extends Controller
 {
     public function visualizar(Request $request)
     {
-        return view('agendamento');
+        $resultado = cirurgia::agendamentos();
+        return view('agendamento', ['res' => $resultado]);
+    }
+
+    public function alterar(Request $request)
+    {
+
+    }
+
+    public function remover(Request $request)
+    {
+        
     }
 }

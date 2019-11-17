@@ -3,12 +3,48 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\QueryException;
 
 
 class cirurgia extends Model
 {
+    public static function cadastro($dados)
+    {
+       //Inserir dados aqui
+
+        try {
+            $crm = $dados->crm;
+            $corem = $dados->corem;
+            $cpf = $dados->cpf;
+            $sala = $dados->sala;
+            $laudo = $dados->laudo;
+            $data = $dados->data;
+            $hora_inicio = $dados->hora_inicio;
+            $hora_termino= $dados->hora_termino;
+            
+            $dados = array($crm, $corem, $cpf, $sala, $laudo, $data, $hora_inicio, $hora_termino);
+            
+            //query de inserção no banco:
+            $sucesso = DB::insert("INSERT into cirurgia (data, hora_inicio, hora_termino, laudo, cpf_paciente, crm_medico, corem_enfermeiro, numero_sala) values (:data, :hora_inicio, :hora_termino, :laudo, :cpf, :crm, :corem, :sala);", ['data' => $data, 'hora_inicio' => $hora_inicio, 'hora_termino' => $hora_termino, 'laudo' => $laudo, 'cpf' => $cpf, 'crm' => $crm, 'corem' => $corem, 'sala' => $sala]);
+            
+            printf($sucesso);
+            if ($sucesso == true)
+                return 1;
+            else
+                return -1;
+        }
+        catch(QueryException $excecao) {
+            if ($excecao->getMessage() == 23505)
+                return 23505; //Chave duplicada
+            else if ($excecao->getMessage() == 42830)
+                return 42830; //Chave estrangeira inválida
+            else
+                return -1;
+            
+        }
+    }
+
     public static function home_realizadas() {
         $cirurgias_realizadas = DB::select("SELECT * FROM cirurgia WHERE data between '31/10/2019' AND CURRENT_DATE ORDER BY data");    
         return $cirurgias_realizadas;
@@ -33,35 +69,13 @@ class cirurgia extends Model
 
     /*Cirurgias realizadas dentro de um periodo */
     public static function cirurgia_Data($info, $data_ini, $data_fim) {
-        $cirurgias_especialidadeData = DB::select("SELECT * from cirurgia where cirurgia.data between data_ini and  'data_fim' order by data",['name' => '%'.$info.'%', 'date_ini' => $data_ini, 'date_fim' => $data_fim]);
+        $cirurgias_especialidadeData = DB::select("SELECT * from cirurgia where cirurgia.data between data_ini and 'data_fim' order by data",['name' => '%'.$info.'%', 'date_ini' => $data_ini, 'date_fim' => $data_fim]);
         return $cirurgias_especialidadeData;
     }
 
-
-    public static function cadastro($dados)
-    {
-        /*
-
-        Inserir dados aqui
-
-        try {
-            
-            //query de inserção no banco:
-            $sucesso = DB::insert();
-
-            if ($sucesso == true)
-                return 1;
-            else
-                return -1;
-        }
-        catch(QueryException $excecao) {
-            if ($excecao->getMessage() == 23505)
-                return 23505; //Chave duplicada
-            else if ($excecao->getMessage() == 42830)
-                return 42830; //Chave estrangeira inválida
-            else
-                return -1;
-            
-        }*/
+    /*Listar agendamentos*/
+    public static function agendamentos() {
+        $agendamentos = DB::select("SELECT * FROM cirurgia WHERE data > CURRENT_DATE ORDER BY data");
+        return $agendamentos;
     }
 }

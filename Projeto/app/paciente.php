@@ -11,14 +11,14 @@ class paciente extends Model
     public static function cadastro($dados)
     {
         try {
-            $laudo = $dados->laudo;
             $nome = $dados->nome;
             $telefone = $dados->telefone;
             $cpf = $dados->cpf;
-            $info = array($cpf, $nome, $cpf);
-            $sucesso = DB::insert('insert into paciente (identificadorPaciente, nome, cpf) values (?, ?, ?)', $info);
-            if ($sucesso == true)
-                return 1;
+            $sucesso = DB::insert("INSERT INTO paciente (nome,cpf) VALUES (:nome , :cpf );", ['nome' => $nome, 'cpf' => $cpf]);
+            $sucessotel = DB::insert("INSERT into telefone(cpf_paciente, numero) values (:cpf, :telefone);", ['telefone' => $telefone, 'cpf' => $cpf]);
+            if ($sucesso == true && $sucessotel == true){
+                    return 1;
+            }
             else
                 return -1;
         }
@@ -27,7 +27,6 @@ class paciente extends Model
                 return 23505; //Chave duplicada
             else
                 return -1;
-
         }
     }
 
