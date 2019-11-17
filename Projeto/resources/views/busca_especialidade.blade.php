@@ -5,7 +5,7 @@ Exibe todas as cirurgias da especialidade buscada no período determinado.
 <!--    Busca   -->
 <form class="form-inline md-form form-sm active-cyan-2 mt-2" method="GET">
     <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Digite o nome da especialidade..." aria-label="Busca" name="busca" id="busca_e">
-    <button class="btn btn-secondary" type="button">
+    <button class="btn btn-secondary" type="submit" >
         <i class="fa fa-search"></i>
     </button>
     <div>

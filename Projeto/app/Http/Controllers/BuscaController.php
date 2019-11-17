@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App;
 use App\medico;
+use App\enfermeiro;
 use App\paciente;
 use App\especialidade;
 use App\cirurgia;
@@ -32,7 +33,7 @@ class BuscaController extends Controller
         }
     }
 
-    public function visualiza_cirurgias(Request $request)
+    public function visualiza_cirurgias_medico(Request $request)
     {
         $crm = $request->crm;
         $resultado = medico::busca_cirurgias($crm);
@@ -43,13 +44,19 @@ class BuscaController extends Controller
     public function enfermeiro(Request $request)
     {
         $busca = $request->busca;
-
         if ($busca) {
             $resultado = enfermeiro::busca($busca);
-            return view('busca_enfermeiro_resultado', $resultado);
+            return view('busca_enfermeiro_resultado', ['busca' => $busca, 'res' => $resultado]);
         } else {
             return view('busca_enfermeiro');
         }
+    }
+
+    public function visualiza_cirurgias_enfermeiro(Request $request)
+    {
+        $corem = $request->corem;
+        $resultado = enfermeiro::busca_cirurgias($corem);
+        return view('busca_enfermeiro_visualizacao', ['res' => $resultado]);
     }
 
     public function paciente(Request $request)
@@ -67,7 +74,7 @@ class BuscaController extends Controller
     {
         $busca = $request->busca;
         if ($busca) {
-            $resultado = medico::busca_crm($busca);
+            $resultado = cirurgia::busca_crm($busca);
             return view('busca_medico_resultado', $resultado);
         } else {
             return view('busca_especialidade');

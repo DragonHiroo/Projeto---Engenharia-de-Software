@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
 
-
 class cirurgia extends Model
 {
     public static function home_realizadas() {
@@ -15,9 +14,28 @@ class cirurgia extends Model
     }
 
     public static function home_agendadas() {
-        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE data between CURRENT_DATE AND '01/12/2019' ORDER BY data");
+        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE cirurgia.agenda = '1' AND data > CURRENT_DATE ORDER BY data");
         return $cirurgias_agendadas;
     }
+
+    /*Cirurgias de acordo com uma especialidade*/
+    public static function cirurgia_especialidade() {
+        $cirurgias_especialidade = DB::select("SELECT* from cirurgia, medico where cirurgia.crm_medico = medico.crm and medico.nome_especialidade like :name",['name' => '%'.$info.'%']);
+        return $cirurgias_especialidade;
+    }
+
+    /*Cirurgias de acordo com uma especialidade dentro de um periodo*/
+    public static function cirurgia_especialidadeData() {
+        $cirurgias_especialidadeData = DB::select("SELECT* from cirurgia, medico where cirurgia.data between date_ini and date_fim and medico.crm = cirurgia.crm_medico and medico.nome_especialidade  like :name ",['name' => '%'.$info.'%']);
+        return $cirurgias_especialidadeData;
+    }
+
+    /*Cirurgias realizadas dentro de um periodo */
+    public static function cirurgia_Data() {
+        $cirurgias_especialidadeData = DB::select("SELECT * from cirurgia where cirurgia.data between data_ini and  'data_fim' order by data",['name' => '%'.$info.'%']);
+        return $cirurgias_especialidadeData;
+    }
+
 
     public static function cadastro($dados)
     {
