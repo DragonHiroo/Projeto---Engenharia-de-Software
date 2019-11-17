@@ -84,7 +84,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/especialidade">
                                 <!-- span data-feather="file-text"></span-->
-                                Busca por especialidades
+                                Buscar por especialidades
                             </a>
                         </li>
                     </ul>
@@ -102,15 +102,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/pacientes" id="relatorio_especialidade">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/pacientes" id="relatorio_pacientes">
                                 <!-- span data-feather="file-text"></span-->
-                                Cirurgias por especialidade
+                                Histórico de pacientes
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/especialidades" id="relatorio_pacientes">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/especialidades" id="relatorio_especialidades">
                                 <!-- span data-feather="file-text"></span-->
-                                Pacientes por especialidade
+                                Histórico de cirurgias por especialidade
                             </a>
                         </li>
                     </ul>
