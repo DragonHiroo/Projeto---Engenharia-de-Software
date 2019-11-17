@@ -104,7 +104,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/especialidades" id="relatorio_pacientes">
                                 <!-- span data-feather="file-text"></span-->
-                                Histórico de especialidades
+                                Total de pacientes por especialidade
                             </a>
                         </li>
                     </ul>
