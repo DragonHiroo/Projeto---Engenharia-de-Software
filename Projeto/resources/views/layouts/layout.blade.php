@@ -8,7 +8,7 @@
     <meta name="author" content="Guilherme Rodrigues, Matheus Santana, Matheus, Wilson">
 
     <meta name="_token" content="{{ csrf_token() }}">
-    
+
     <title>Cirurgia</title>
 
     <!-- Bootstrap -->
@@ -17,7 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!-- CSS dashboard -->
     <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
@@ -55,50 +55,87 @@
                             </a>
                         </li>
                         </h6>
-                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>Buscas</span>
-                            <a class="d-flex align-items-center text-muted">
-                                <!--span data-feather="plus-circle"></span-->
+                    </ul>
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Buscas</span>
+                        <a class="d-flex align-items-center text-muted">
+                            <!--span data-feather="plus-circle"></span-->
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/medico">
+                                <!-- span data-feather="file-text"></span-->
+                                Buscar por médicos
                             </a>
-                        </h6>
-                        <ul class="nav flex-column mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/medico">
-                                    <!-- span data-feather="file-text"></span-->
-                                    Buscar por médicos
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/enfermeiro">
-                                    <!-- span data-feather="file-text"></span-->
-                                    Buscar por enfermeiros
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/paciente">
-                                    <!-- span data-feather="file-text"></span-->
-                                    Buscar por pacientes
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/especialidade">
-                                    <!-- span data-feather="file-text"></span-->
-                                    Busca por especialidades
-                                </a>
-                            </li>
-                        </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/enfermeiro">
+                                <!-- span data-feather="file-text"></span-->
+                                Buscar por enfermeiros
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/paciente">
+                                <!-- span data-feather="file-text"></span-->
+                                Buscar por pacientes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/busca/especialidade">
+                                <!-- span data-feather="file-text"></span-->
+                                Busca por especialidades
+                            </a>
+                        </li>
+                    </ul>
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Relatórios</span>
+                        <a class="d-flex align-items-center text-muted" href="#">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/historico" id="relatorio_geral">
+                                <!-- span data-feather="file-text"></span-->
+                                Resumo geral de cirurgias
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/" id="relatorio_especialidade">
+                                <!-- span data-feather="file-text"></span-->
+                                Cirurgias por especialidade
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/" id="relatorio_pacientes">
+                                <!-- span data-feather="file-text"></span-->
+                                Pacientes por especialidade
+                            </a>
+                        </li>
+                    </ul>
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Agendamento</span>
+                        <a class="d-flex align-items-center text-muted" href="#">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/agendamento/" id="agendamentos">
+                                <!-- span data-feather="file-text"></span-->
+                                Visualizar agendamentos
+                            </a>
+                        </li>
                 </div>
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2" id="titulo_topo">Cirurgias realizadas neste mês</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        
-                    </div>
                 </div>
                 @yield('content')
-                
+
         </div>
         </main>
     </div>

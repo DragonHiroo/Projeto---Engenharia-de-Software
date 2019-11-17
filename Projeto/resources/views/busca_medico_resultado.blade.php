@@ -10,13 +10,13 @@
                 <i class="fa fa-search"></i>
         </div>
         </button>
-            <div class="d-block">
-                Buscar por:
-                    <select class="form-control" name="op" id="opcoes">
-                        <option value="nome" selected="selected" id="n">Nome</option>
-                        <option value="CRM" id="crm">CRM</option>
-                    </select>
-            </div>
+        <div class="d-block">
+            Buscar por:
+            <select class="form-control" name="op" id="opcoes">
+                <option value="nome" selected="selected" id="n">Nome</option>
+                <option value="CRM" id="crm">CRM</option>
+            </select>
+        </div>
     </form>
 </div>
 <div class="mt-2 md-2">
@@ -24,67 +24,38 @@
 </div>
 <div class="resultado">
     <!-- Exibe os resultados ou mensagem "resultado não encontrado" dependendo do valor enviado pelo controller -->
-<?php if ($res == 'n_enc') { ?>
-    Resultado não encontrado!
-<?php } else if ($res == 'enc') { ?>
+    @if (empty($res))
+        Resultado não encontrado!
+    @else
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
-                    <th>Código</th>
-                     <th>Médico</th>
-                    <th>Paciente</th>
+                    <th>CRM</th>
+                    <th>Nome</th>
                     <th>Especialidade</th>
+                    <th>Data</th>
+                    <th>CPF</th>
+                    <th>Início</th>
                     <th>Duração</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach($res as $row)
                 <tr>
-                    <td>0001</td>
-                    <td>João Carlos Lamborguini</td>
-                    <td>José Amaral Ferrari</td>
-                    <td>Cardiologia</td>
-                    <td>12 Horas</td>
+                    <td>{{ $row->crm }}</td>
+                    <td>{{ $row->nome }}</td>
+                    <td>{{ $row->nome_especialidade }}</td>
+                    <td>{{ $row->data }}</td>
+                    <td>{{ $row->cpf_paciente }}</td>
+                    <td>{{ $row->hora_inicio }}</td>
+                    <td>{{ $row->duracao }}</td>
                 </tr>
-                <tr>
-                    <td>0001</td>
-                    <td>João Carlos Lamborguini</td>
-                    <td>José Amaral Ferrari</td>
-                    <td>Cardiologia</td>
-                    <td>12 Horas</td>
-                </tr>
-                <tr>
-                    <td>0001</td>
-                    <td>João Carlos Lamborguini</td>
-                    <td>José Amaral Ferrari</td>
-                    <td>Cardiologia</td>
-                    <td>12 Horas</td>
-                </tr>
-                <tr>
-                    <td>0001</td>
-                    <td>João Carlos Lamborguini</td>
-                    <td>José Amaral Ferrari</td>
-                    <td>Cardiologia</td>
-                    <td>12 Horas</td>
-                </tr>
-                <tr>
-                    <td>0001</td>
-                    <td>João Carlos Lamborguini</td>
-                    <td>José Amaral Ferrari</td>
-                    <td>Cardiologia</td>
-                    <td>12 Horas</td>
-                </tr>
-                <tr>
-                    <td>0001</td>
-                    <td>João Carlos Lamborguini</td>
-                    <td>José Amaral Ferrari</td>
-                    <td>Cardiologia</td>
-                    <td>12 Horas</td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
-<?php } ?>
+    @endif
 </div>
 
 <!-- Trocando placeholder -->
