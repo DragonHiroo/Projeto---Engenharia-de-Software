@@ -29,10 +29,10 @@ Route::get('/busca/enfermeiro', 'BuscaController@enfermeiro');
 Route::get('/busca/paciente', 'BuscaController@paciente');
 Route::get('/busca/especialidade', 'BuscaController@especialidade');
 
+//Rotas agendamento
+Route::get('/agendamento', 'AgendamentoController@visualizar');
+
 //Rotas relatório
 Route::get('/relatorio/cirurgias', 'RelatorioController@cirurgias');
 Route::get('/relatorio/pacientes', 'RelatorioController@pacientes');
 Route::get('/relatorio/especialidades', 'RelatorioController@especialidades');
-
-//Rotas agendamento
-Route::get('/agendamento', 'AgendamentoController@visualizar');

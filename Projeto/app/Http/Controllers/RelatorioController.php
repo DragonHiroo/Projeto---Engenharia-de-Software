@@ -13,16 +13,16 @@ class RelatorioController extends Controller
 {
     public function cirurgias(Request $request)
     {
-        return view('relatorio_cirurgias');
+        return view('relatorio_cirurgias'); //Relatório 1
     }
 
     public function pacientes(Request $request)
     {
-        return view('relatorio_pacientes');
+        return view('relatorio_pacientes'); //Relatório 2
     }
 
     public function especialidades(Request $request)
     {
-        return view('relatorio_especialidades');
+        return view('relatorio_especialidades'); //Relatório 3
     }
 }
