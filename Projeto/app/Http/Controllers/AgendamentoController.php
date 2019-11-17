@@ -11,7 +11,7 @@ use App\cirurgia;
 
 class AgendamentoController extends Controller
 {
-    public function especialidades(Request $request)
+    public function visualizar(Request $request)
     {
         return view('agendamento');
     }

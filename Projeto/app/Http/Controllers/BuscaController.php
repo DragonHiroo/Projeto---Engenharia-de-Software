@@ -19,10 +19,12 @@ class BuscaController extends Controller
         if ($busca && $op) { //Parâmetros da busca corretos
             if ($op == 'CRM') { //Busca por CRM
                 $resultado = medico::busca_crm($busca);
+                $tipo = 1;
             } else if ($op == 'nome') { //Busca por nome
                 $resultado = medico::busca_nome($busca);
+                $tipo = 2;
             }
-            return view('busca_medico_resultado', ['busca' => $busca, 'res' => $resultado]);
+            return view('busca_medico_resultado', ['busca' => $busca, 'res' => $resultado, 'tipo' => $tipo]);
         } else if (!($busca)) { //Não houve busca, redireciona para a página inicial
             return view('busca_medico');
         }
