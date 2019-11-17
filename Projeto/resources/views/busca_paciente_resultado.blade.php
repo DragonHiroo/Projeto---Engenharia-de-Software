@@ -15,7 +15,7 @@
 <div class="resultado">
     <!-- Exibe os resultados ou mensagem "resultado não encontrado" dependendo do valor enviado pelo controller -->
     @if (!$res)
-        Nenhum enfermeiro encontrado!
+        Nenhum paciente encontrado!
     @else
     <div class="table-responsive">
         <table class="table table-striped table-sm">
