@@ -55,7 +55,7 @@ class cirurgia extends Model
     }
 
     public static function home_agendadas() {
-        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE cirurgia.agenda = '1' AND (cirurgia.data between '30/11/2019' AND '01/12/2019') ORDER BY data");
+        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE cirurgia.agenda = '1' AND (cirurgia.data between CURRENT_DATE AND '30/11/2019') ORDER BY data");
         return $cirurgias_agendadas;
     }
 
