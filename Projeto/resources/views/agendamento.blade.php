@@ -12,24 +12,30 @@
             <thead>
                 <tr>
                     <th>CRM</th>
-                    <th>Nome</th>
-                    <th>Especialidade</th>
                     <th>Data</th>
-                    <th>CPF</th>
                     <th>Início</th>
-                    <th>Duração</th>
+                    <th>Término</th>
+                    <th>CPF paciente</th>
+                    <th>COREM enfermeiro</th>
+                    <th>Sala</th>
+                    <th>Laudo</th>
+                    <th>Alterar</th>
+                    <th>Remover</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($res as $row)
                 <tr>
-                    <td>{{ $row->crm }}</td>
-                    <td>{{ $row->nome }}</td>
-                    <td>{{ $row->nome_especialidade }}</td>
+                    <td>{{ $row->crm_medico }}</td>
                     <td>{{ $row->data }}</td>
-                    <td>{{ $row->cpf_paciente }}</td>
                     <td>{{ $row->hora_inicio }}</td>
-                    <td>{{ $row->duracao }}</td>
+                    <td>{{ $row->hora_termino }}</td>
+                    <td>{{ $row->cpf_paciente }}</td>
+                    <td>{{ $row->corem_enfermeiro }}</td>
+                    <td>{{ $row->numero_sala }}</td>
+                    <td>{{ $row->laudo }}</td>
+                    <td><a href="#">Alterar</a></td>
+                    <td><a href="#">Remover</a></td>
                 </tr>
                 @endforeach
             </tbody>
