@@ -25,7 +25,7 @@
 
 <body>
     <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow" style="background-color: #067F6E;">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.php">Hospital - Cirurgias</a>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/Projeto---Engenharia-de-Software/Projeto/public/index.php">Hospital - Cirurgias</a>
 
         <ul class="navbar-nav px-3">
         </ul>
