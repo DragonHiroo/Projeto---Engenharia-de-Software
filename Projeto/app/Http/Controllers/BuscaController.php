@@ -64,10 +64,17 @@ class BuscaController extends Controller
         $busca = $request->busca;
         if ($busca) {
             $resultado = paciente::busca($busca);
-            return view('busca_paciente_resultado', $resultado);
+            return view('busca_paciente_resultado', ['busca' => $busca, 'res' => $resultado]);
         } else {
             return view('busca_paciente');
         }
+    }
+
+    public function visualiza_cirurgias_paciente(Request $request)
+    {
+        $cpf = $request->cpf;
+        $resultado = paciente::busca_cirurgias($cpf);
+        return view('busca_paciente_visualizacao', ['res' => $resultado]);
     }
 
     public function especialidade(Request $request)

@@ -28,6 +28,7 @@ Route::get('/busca/medico/{crm}', 'BuscaController@visualiza_cirurgias_medico');
 Route::get('/busca/enfermeiro', 'BuscaController@enfermeiro');
 Route::get('/busca/enfermeiro/{corem}', 'BuscaController@visualiza_cirurgias_enfermeiro');
 Route::get('/busca/paciente', 'BuscaController@paciente');
+Route::get('/busca/paciente/{cpf}', 'BuscaController@visualiza_cirurgias_paciente');
 Route::get('/busca/especialidade', 'BuscaController@especialidade');
 
 //Rotas agendamento

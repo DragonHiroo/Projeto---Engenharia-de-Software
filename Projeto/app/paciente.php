@@ -31,9 +31,13 @@ class paciente extends Model
         }
     }
 
-    public static function cirurgias_paciente(Request $request) {
-        $info = $request->cpf;
-        $resultado = DB::select("SELECT * from cirurgia where cirurgia.cpf_paciente = :cpf ORDER By data", ['cpf' => $info]);     
+    public static function busca($info) {
+        $resultado = DB::select("SELECT cpf, nome FROM paciente WHERE cpf = :cpf ORDER BY cpf", ['cpf' => $info]);     
+        return $resultado;
+    }
+    
+    public static function busca_cirurgias($info) {
+        $resultado = DB::select("SELECT * from cirurgia, paciente where cirurgia.cpf_paciente = paciente.cpf and paciente.cpf = :cpf ORDER By data", ['cpf' => $info]);     
         return $resultado;
     }
 

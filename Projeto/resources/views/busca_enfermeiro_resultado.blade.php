@@ -8,10 +8,6 @@
         <i class="fa fa-search"></i>
     </button>
 </form>
-<script>
-    $(document).attr("title", "Cirurgia - Busca");;
-    $('#titulo_topo').text("Busca por enfermeiros")
-</script>
 
 <div class="mt-2 md-2">
     <h5>Exibindo resultados de busca por {{ $busca }}:</h5>
