@@ -59,7 +59,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($realizadas as $row)
+                @foreach($agendadas as $row)
                 <tr>
                     <td>{{ $row->data }}</td>
                     <td>{{ $row->hora_inicio }}</td>

@@ -51,7 +51,7 @@ class cirurgia extends Model
     }
 
     public static function home_agendadas() {
-        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE cirurgia.agenda = '1' AND data > CURRENT_DATE ORDER BY data");
+        $cirurgias_agendadas = DB::select("SELECT * FROM cirurgia WHERE cirurgia.agenda = '1' ORDER BY data");
         return $cirurgias_agendadas;
     }
 
