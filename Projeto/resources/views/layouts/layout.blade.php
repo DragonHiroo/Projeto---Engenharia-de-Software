@@ -98,19 +98,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/cirurgias" id="relatorio_geral">
                                 <!-- span data-feather="file-text"></span-->
-                                Resumo geral de cirurgias
+                                Resumo geral de atendimentos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/pacientes" id="relatorio_pacientes">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/especialidades" id="relatorio_pacientes">
                                 <!-- span data-feather="file-text"></span-->
-                                Histórico de pacientes
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/especialidades" id="relatorio_especialidades">
-                                <!-- span data-feather="file-text"></span-->
-                                Histórico de cirurgias por especialidade
+                                Histórico de especialidades
                             </a>
                         </li>
                     </ul>

@@ -26,8 +26,11 @@ class RelatorioController extends Controller
         return view('relatorio_cirurgias', ['total' => $total, 'media' => $media, 'pacientes' => $pacientes]);
     }
 
-    public function pacientes(Request $request)
+    public function especialidades(Request $request)
     {
-        return view('relatorio_pacientes'); //Relatório 2
+        //Total de pacientes por especialidade
+        $total = relatorio::pacientesEspecialidade();
+
+        return view('relatorio_especialidades', ['res' => $total]);
     }
 }
