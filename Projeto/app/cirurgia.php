@@ -19,20 +19,20 @@ class cirurgia extends Model
     }
 
     /*Cirurgias de acordo com uma especialidade*/
-    public static function cirurgia_especialidade() {
-        $cirurgias_especialidade = DB::select("SELECT* from cirurgia, medico where cirurgia.crm_medico = medico.crm and medico.nome_especialidade like :name",['name' => '%'.$info.'%']);
+    public static function cirurgia_especialidade($busca) {
+        $cirurgias_especialidade = DB::select("SELECT * from cirurgia, medico where cirurgia.crm_medico = medico.crm and medico.nome_especialidade like :name",['name' => '%'.$busca.'%']);
         return $cirurgias_especialidade;
     }
 
     /*Cirurgias de acordo com uma especialidade dentro de um periodo*/
-    public static function cirurgia_especialidadeData() {
-        $cirurgias_especialidadeData = DB::select("SELECT* from cirurgia, medico where cirurgia.data between date_ini and date_fim and medico.crm = cirurgia.crm_medico and medico.nome_especialidade  like :name ",['name' => '%'.$info.'%']);
+    public static function cirurgia_especialidadeData($info, $data_ini, $data_fim) {
+        $cirurgias_especialidadeData = DB::select("SELECT * from cirurgia, medico where cirurgia.data between :date_ini and :date_fim and medico.crm = cirurgia.crm_medico and medico.nome_especialidade  like :name ",['name' => '%'.$info.'%', 'date_ini' => $data_ini, 'date_fim' => $data_fim]);
         return $cirurgias_especialidadeData;
     }
 
     /*Cirurgias realizadas dentro de um periodo */
-    public static function cirurgia_Data() {
-        $cirurgias_especialidadeData = DB::select("SELECT * from cirurgia where cirurgia.data between data_ini and  'data_fim' order by data",['name' => '%'.$info.'%']);
+    public static function cirurgia_Data($info, $data_ini, $data_fim) {
+        $cirurgias_especialidadeData = DB::select("SELECT * from cirurgia where cirurgia.data between data_ini and  'data_fim' order by data",['name' => '%'.$info.'%', 'date_ini' => $data_ini, 'date_fim' => $data_fim]);
         return $cirurgias_especialidadeData;
     }
 

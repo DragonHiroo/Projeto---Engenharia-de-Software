@@ -22,11 +22,9 @@ class BuscaController extends Controller
             if ($op == 'CRM') { //Busca por CRM
                 $resultado = medico::busca_crm($busca);
                 return view('busca_medico_resultado', ['busca' => $busca, 'res' => $resultado]);
-
             } else if ($op == 'nome' && !$visualiza) { //Busca por nome, listar nomes
                 $resultado = medico::busca_nome($busca);
                 return view('busca_medico_resultado', ['busca' => $busca, 'res' => $resultado]);
-
             }
         } else if (!($busca)) { //Não houve busca, redireciona para a página inicial
             return view('busca_medico');
@@ -80,9 +78,16 @@ class BuscaController extends Controller
     public function especialidade(Request $request)
     {
         $busca = $request->busca;
+        $inicio = $request->data_i;
+        $fim = $request->data_f;
         if ($busca) {
-            $resultado = cirurgia::busca_crm($busca);
-            return view('busca_medico_resultado', $resultado);
+            if (!($inicio && $fim)) { //Busca sem período; retornar todos os resultados do banco
+                $resultado = cirurgia::cirurgia_especialidade($busca);
+                return view('busca_especialidade_resultado', ['busca' => $busca, 'inicio' => $inicio, 'fim' => $fim, 'res' => $resultado]);
+            } else { //Busca com período; retornar cirurgias da especialidade realizadas dentro do período
+                $resultado = cirurgia::cirurgia_especialidadeData($busca, $inicio, $fim);
+                return view('busca_especialidade_resultado', ['busca' => $busca, 'inicio' => $inicio, 'fim' => $fim, 'res' => $resultado]);
+            }
         } else {
             return view('busca_especialidade');
         }
