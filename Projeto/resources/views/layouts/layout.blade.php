@@ -96,19 +96,19 @@
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/historico" id="relatorio_geral">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/cirurgias" id="relatorio_geral">
                                 <!-- span data-feather="file-text"></span-->
                                 Resumo geral de cirurgias
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/" id="relatorio_especialidade">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/pacientes" id="relatorio_especialidade">
                                 <!-- span data-feather="file-text"></span-->
                                 Cirurgias por especialidade
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/" id="relatorio_pacientes">
+                            <a class="nav-link" href="/Projeto---Engenharia-de-Software/Projeto/public/relatorio/especialidades" id="relatorio_pacientes">
                                 <!-- span data-feather="file-text"></span-->
                                 Pacientes por especialidade
                             </a>

@@ -18,7 +18,6 @@ class RelatorioController extends Controller
 
     public function pacientes(Request $request)
     {
-        $sucesso = paciente::cadastro($request);
         return view('relatorio_pacientes');
     }
 
