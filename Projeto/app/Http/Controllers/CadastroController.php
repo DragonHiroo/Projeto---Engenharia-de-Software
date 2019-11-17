@@ -14,10 +14,15 @@ class CadastroController extends Controller
 
     public function cadastroP(Request $request) {
         $sucesso = paciente::cadastro($request);
-        return view('cadastro_paciente', ['res' => $sucesso]); //Sucesso na inserção
+        return view('cadastro_paciente', ['res' => $sucesso]); //Status da inserção
     }
     
     public function cirurgia(Request $request) {
         return view('cadastro_cirurgia', ['res' => 0]);
+    }
+
+    public function cadastroC(Request $request) {
+        $sucesso = paciente::cadastro($request);
+        return view('cadastroCirurgia', ['res' => $sucesso]); //Status na inserção
     }
 }

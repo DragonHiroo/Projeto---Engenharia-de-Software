@@ -55,6 +55,23 @@
       <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>
     </form>
 </div>
+
+@if(res==1)
+<div class="alert alert-success">
+  <strong>Cirurgia cadastrada com sucesso!</strong>
+</div>
+
+@elseif(res==-1)
+<div class="alert alert-danger">
+  <strong>Erro ao cadastrar cirurgia!
+</div>
+
+@elseif(res==23505)
+<div class="alert alert-danger">
+  <strong>Erro!</strong>Já existe uma cirurgia com esta data, horário e/ou paciente!
+</div>
+
+@elseif(res==)
   
 <script>
     $(document).attr("title", "Cirurgia - Cadastro de cirurgia");;

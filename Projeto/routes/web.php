@@ -18,6 +18,7 @@ Route::get('/', 'HomeController@index');
 
 //Rotas cadastro
 Route::post('/cadastro/paciente', 'CadastroController@cadastroP');
+Route::get('/cadastro/paciente', 'CadastroController@paciente');
 Route::post('/cadastro/cirurgia', 'CadastroController@cadastroC');
 Route::get('/cadastro/cirurgia', 'CadastroController@cirurgia');
 

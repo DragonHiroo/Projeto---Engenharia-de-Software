@@ -23,8 +23,8 @@ class paciente extends Model
                 return -1;
         }
         catch(QueryException $excecao) {
-            if ($excecao->getMessage() == 1062)
-                return 1062; //Chave duplicada
+            if ($excecao->getMessage() == 23505)
+                return 23505; //Chave duplicada
             else
                 return -1;
 
