@@ -18,8 +18,8 @@
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="paciente">Paciente</label>
-        <input type="text" class="form-control" placeholder="CPF do paciente" required="required">
+        <label for="paciente">CPF do paciente</label>
+        <input type="number" class="form-control" placeholder="CPF do paciente" required="required">
       </div>
       <div class="form-group col-md-6">
         <label for="especialidade">Especialidade</label>
@@ -40,15 +40,15 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="Data">Data</label>
-        <input type="text" class="form-control" placeholder="Digite a Data" required="required">
+        <input type="date" class="form-control" placeholder="Digite a Data" required="required">
       </div>
       <div class="form-group col-md-3">
         <label for="hora_inicio">Hora de inicio</label>
-        <input type="number" class="form-control" placeholder="Hora de Inicio" required="required">
+        <input type="time" class="form-control" placeholder="Hora de Inicio" required="required">
       </div>
       <div class="form-group col-md-3">
         <label for="hora_termino">Hora de término</label>
-        <input type="number" class="form-control" placeholder="Hora de Termino" required="required">
+        <input type="time" class="form-control" placeholder="Hora de Termino" required="required">
       </div>
     </div>
 </div>
@@ -56,25 +56,26 @@
 </form>
 </div>
 
-@if(res==1)
+@if($res==1)
 <div class="alert alert-success">
   <strong>Cirurgia cadastrada com sucesso!</strong>
 </div>
 
-@elseif(res==-1)
+@elseif($res==-1)
 <div class="alert alert-danger">
   <strong>Erro ao cadastrar cirurgia!
 </div>
 
-@elseif(res==23505)
+@elseif($res==23505)
 <div class="alert alert-danger">
   <strong>Erro!</strong>Já existe uma cirurgia com esta data, horário e/ou paciente!
 </div>
 
-@elseif(res==42830)
+@elseif($res==42830)
 <div class="alert alert-danger">
   <strong>Erro!</strong>Certifique-se de que CPF, CRM, COREM e número de sala são existentes!
 </div>
+@endif
 
 <script>
   $(document).attr("title", "Cirurgia - Cadastro de cirurgia");;

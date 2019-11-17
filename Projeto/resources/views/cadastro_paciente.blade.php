@@ -24,20 +24,21 @@
   </form>
 </div>
 
-@if(res==1)
+@if($res==1)
 <div class="alert alert-success">
   <strong>Paciente cadastrado com sucesso!</strong>
 </div>
 
-@elseif(res==-1)
+@elseif($res==-1)
 <div class="alert alert-danger">
   <strong>Erro ao cadastrar paciente!
 </div>
 
-@elseif(res==23505)
+@elseif($res==23505)
 <div class="alert alert-danger">
   <strong>Erro!</strong> CPF já cadastrado!
 </div>
+@endif
 
 <script>
   $(document).attr("title", "Cirurgia - Cadastro de paciente")
