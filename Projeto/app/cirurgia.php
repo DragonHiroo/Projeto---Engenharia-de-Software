@@ -20,29 +20,22 @@ class cirurgia extends Model
             $data = $dados->data;
             $hora_inicio = $dados->hora_inicio;
             $hora_termino= $dados->hora_termino;
-            
-            $dados = array($crm, $corem, $cpf, $sala, $laudo, $data, $hora_inicio, $hora_termino);
-            
+                     
             //query de inserção no banco:
             $sucesso = DB::insert("INSERT into cirurgia (data, hora_inicio, hora_termino, laudo, cpf_paciente, crm_medico, corem_enfermeiro, numero_sala) values (:data, :hora_inicio, :hora_termino, :laudo, :cpf, :crm, :corem, :sala);", ['data' => $data, 'hora_inicio' => $hora_inicio, 'hora_termino' => $hora_termino, 'laudo' => $laudo, 'cpf' => $cpf, 'crm' => $crm, 'corem' => $corem, 'sala' => $sala]);
             
             printf($sucesso);
             if ($sucesso == true)
                 return 1;
-            else
-                return -1;
         }
         catch(QueryException $excecao) {
             if ($excecao->getMessage() == 23505) {
-                var_dump($excecao);
-                return 23505; //Chave duplicada
+                return 23505; //Chave duplicada';
             }
             else if ($excecao->getMessage() == 42830) {
-                var_dump($excecao);
                 return 42830; //Chave estrangeira inválida
             }
             else {
-                var_dump($excecao);
                 return -1;
             }
             

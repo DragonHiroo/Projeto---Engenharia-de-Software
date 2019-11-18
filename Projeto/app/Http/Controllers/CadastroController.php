@@ -22,7 +22,7 @@ class CadastroController extends Controller
     }
 
     public function cadastroC(Request $request) {
-        $sucesso = paciente::cadastro($request);
+        $sucesso = cirurgia::cadastro($request);
         return view('cadastro_cirurgia', ['res' => $sucesso]); //Status na inserção
     }
 }

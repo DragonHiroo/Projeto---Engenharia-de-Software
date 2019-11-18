@@ -1,8 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-
-
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
   <form action="" method="POST">
     @csrf
@@ -10,12 +8,12 @@
       <div class="form-group col-md-6">
         <label for="medico">Médico cirurgião</label>
         <input type="number" name="crm" class="form-control" placeholder="CRM" required="required">
-        <small id="emailHelp" class="form-text text-muted">Por favor, digite o código CRM do cirurgião responsável</small>
+        <small class="form-text text-muted">Por favor, digite o código CRM do cirurgião responsável</small>
       </div>
       <div class="form-group col-md-6">
         <label for="exampleInputPassword1">Enfermeiro responsável</label>
         <input type="number" name="corem" class="form-control" placeholder="COREM" required="required">
-        <small id="emailHelp" class="form-text text-muted">Por favor, digite o código COREM do enfermeiro</small>
+        <small class="form-text text-muted">Por favor, digite o código COREM do enfermeiro</small>
       </div>
     </div>
     <div class="form-row">
@@ -43,19 +41,19 @@
         <input type="date" name="data" class="form-control" placeholder="Digite a Data" required="required">
       </div>
       <div class="form-group col-md-3">
-        <label for="hora_inicio">Hora de inicio</label>
-        <input type="time" name="hora_inicio" class="form-control" placeholder="Hora de Inicio" required="required">
+        <label for="hora_inicio">Hora de início</label>
+        <input type="text" name="hora_inicio" class="form-control" placeholder="Hora de Inicio" required="required">
       </div>
       <div class="form-group col-md-3">
         <label for="hora_termino">Hora de término</label>
-        <input type="time" name="hora_termino" class="form-control" placeholder="Hora de Termino" required="required">
+        <input type="text" name="hora_termino" class="form-control" placeholder="Hora de Termino" required="required">
       </div>
     </div>
 </div>
 <button type="submit" class="btn text-light" style="background-color: #41CCA5;">Enviar</button>
-</form>
 
-@if($res==1)
+
+@if($res==1) 
 <div class="alert alert-success">
   <strong>Cirurgia cadastrada com sucesso!</strong>
 </div>
@@ -80,6 +78,5 @@
   $(document).attr("title", "Cirurgia - Cadastro de cirurgia");;
   $('#titulo_topo').text("Cadastrar Cirurgia")
 </script>
-
 
 @endsection
