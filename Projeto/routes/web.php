@@ -33,6 +33,11 @@ Route::get('/busca/especialidade', 'BuscaController@especialidade');
 
 //Rotas agendamento
 Route::get('/agendamento', 'AgendamentoController@visualizar');
+Route::get('/agendamento/remocao/{cpf_paciente}/{data}', 'AgendamentoController@remover_agendamento');
+Route::get('/agendamento/alteracao/{cpf_paciente}/{data}', 'AgendamentoController@alterar_agendamento');
+Route::post('/agendamento/alteracao/{cpf_paciente}/{data}', 'AgendamentoController@alterar_registro');
+//Route::get('/agendamento/remover/', 'AgendamentoController@lixo');
+//Route::get('/agendamento/lixo', 'AgendamentoController@visualizar');
 
 //Rotas relatório
 Route::get('/relatorio/cirurgias', 'RelatorioController@cirurgias');
