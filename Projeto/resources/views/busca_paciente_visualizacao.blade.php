@@ -40,6 +40,6 @@
 
 <script>
     $(document).attr("title", "Cirurgia - Busca");;
-    $('#titulo_topo').text("Busca por enfermeiros")
+    $('#titulo_topo').text("Busca por paciente")
 </script>
 @endsection

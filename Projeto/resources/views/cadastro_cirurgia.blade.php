@@ -42,11 +42,11 @@
       </div>
       <div class="form-group col-md-3">
         <label for="hora_inicio">Hora de início</label>
-        <input type="text" name="hora_inicio" class="form-control" placeholder="Hora de Inicio" required="required">
+        <input type="time" name="hora_inicio" class="form-control" placeholder="Hora de Inicio" required="required">
       </div>
       <div class="form-group col-md-3">
         <label for="hora_termino">Hora de término</label>
-        <input type="text" name="hora_termino" class="form-control" placeholder="Hora de Termino" required="required">
+        <input type="time" name="hora_termino" class="form-control" placeholder="Hora de Termino" required="required">
       </div>
     </div>
 </div>
